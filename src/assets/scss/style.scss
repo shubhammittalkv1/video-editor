@@ -1,0 +1,204 @@
+@import '~bootstrap/scss/bootstrap.scss';
+@import './variable.scss';
+// Below code is used for Upload Container
+.upload-video-container {
+    padding: 30px 50px 30px 50px;
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .upload-video-content{
+        font-size: 1rem;
+        color:$primary-black;
+    }
+    .upload-button-container {
+        display: block;
+    }
+}
+// End of the above code
+// Below code is used for the Video Editor Component
+.setting-container {
+    margin: 0.5rem 0 0.5rem 0; 
+}
+// End of the above code
+// Below is the code for the Range Slider Component
+.slider-range-conatiner {
+    margin: 3rem 0 2rem 0;
+}
+// End of the above code
+// Below code is used for Video Player
+.video-container {
+    .player-wrapper {
+        width: auto; // Reset width
+        height: auto; // Reset height
+    }
+    .react-player {
+      padding-top: 56.25%; // Percentage ratio for 16:9
+      position: relative; // Set to relative
+    }
+    
+    .react-player > div {
+      position: absolute; // Scaling will occur since parent is relative now
+    }
+}
+
+// End of the above code
+// Below code is used for Transcript Component
+.transcript-header {
+    background-color: $primary-white;
+    padding-bottom: 0;
+    .transcript-page-tabs {
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 0 0 0.5rem 0 ;
+        margin-right: 1rem;
+    }
+    .active{
+        color: $primary-color;
+        border-bottom: 2px solid $primary-color;
+    }
+}
+.transcript-container {
+    .transcript-body {
+        height: 75vh;
+        overflow-y: scroll;
+    }
+    .transcript-user-container {
+        margin-bottom: 0.6rem;
+        border-bottom: 1px solid $primary-grey-30;
+        .transcript-user-initial {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px !important;
+            height: 30px !important;
+            border-radius: 50%;
+            background-color: $initial-bg-color;
+            color: white;
+            padding: 5px;
+            font-weight: bold;
+        }
+        .transcript-user-name {
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 0.05rem;
+            display: flex;
+            align-items: center;
+        }
+        .transcript-time {
+            font-size: 0.8rem;
+            color: $primary-grey;
+            padding-left: 0.5rem;
+        }
+        .transcript-delete {
+            text-align: end;
+            padding: 0;
+            .transcript-trash {
+                cursor: pointer;
+            }
+        }
+        .transcript-text-container {
+            padding-top: 0.4rem;
+            width: 100%;
+            padding-bottom: 0.8rem;
+            .transcript-text {
+                font-size: 0.9rem;
+                font-weight: 500;
+                margin: 0;
+                padding-right: 0;
+            }
+        }
+    }
+    
+}
+// End of the above code
+// Below code is used for Summary section in transcript
+.transcript-summary-section {
+    text-align: center;
+    margin-top: 50%;
+}
+// End of the above code
+// Below code is used for Vidoso Content Container
+.vidoso-container {
+    // min-height: calc(100vh - 75px);
+    padding: 30px 50px 30px 50px;
+    .vidoso-status-block {
+        background-color: $primary-color-80;
+        color: $primary-white;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.7rem;
+        border-radius: 7px;
+        border: 2px solid $primary-color;
+        float: right;
+    }
+}
+// End of the above code
+
+// Below code is for the footer
+.vidoso-footer{
+    height: 50px;
+    // margin-top: -50px;
+    .vidoso-footer-bg-color {
+        background-color: rgba(0, 0, 0, 0.05) !important;
+    }
+}
+// End of the above code
+// Below is the CSS for Loader
+.loader-container {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: transparent;
+    z-index: 1;
+}
+.spinner {
+    width: 64px;
+    height: 64px;
+    border: 8px solid;
+    border-color: $primary-color transparent $primary-color transparent;
+    border-radius: 50%;
+    animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+// End of the above code
+// Below is the CSS for buttons
+.btn-primary-videoso {
+    background-color: $primary-color;
+    border: none;
+    color: $primary-white;
+    padding: 0.8rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius:0.5rem;
+    margin-right: 1rem;
+}
+.btn-primary-videoso:hover {
+    background-color: $primary-color-80;
+}
+// End of the above code
+// Below is the code for helper classes
+.vidoso-icon-button {
+    margin-right: 0.3rem;
+}
+// End of the above code
+.Toastify__toast-theme--light {
+    background: $primary-color !important;
+    color: $primary-white !important;
+    font-weight: bold;
+}
